@@ -1,0 +1,387 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dash Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+   
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png"></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7 ">
+                    <nav class="header__menu ">
+                        <ul class="justify-content-between">
+                            <li class="active mr-5"><a href="./DashBoard.html">DashBoard</a></li>
+                            <li class="mr-5"><a href="./Orders.html">Orders</a></li>
+                            <li class="mr-5"><a href="./Products.html">Products</a></li>
+                            <li class=" mr-5"><a href="./Sellers.html">Sellers</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+
+                        <ul class="header__right__widget">
+                            <li><span><i class="fas fa-sign-out-alt"></i></span></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+    </header>
+   
+       
+       
+   
+            <div class="main-content-inner">
+         
+                <div class="sales-report-area mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="single-report mb-xs-30">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
+                                
+                                    <div class="s-report-title d-flex justify-content-between">
+                                        <h4 class="header-title mb-0"style="color:blue";>SELLERS</h4>
+                                        <p style="color: red;">86 %</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>4567809,987</h2>
+                                        <span>124 Seller</span>
+                                    </div>
+                                </div>
+                                <canvas id="coin_sales1" height="200"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-report mb-xs-30">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
+                                 
+                                    <div class="s-report-title d-flex justify-content-between">
+                                        <h4 class="header-title mb-0"style="color: blue;">NEW USERS</h4>
+                                        <p  style="color: red;">50 %</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>8625,987</h2>
+                                        <span>200 User</span>
+                                    </div>
+                                </div>
+                                <canvas id="coin_sales2" height="200"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-4 coin-distribution">
+                            <div class="card h-full">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-0">Fashion</h4>
+                                    <div id="coin_distribution"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xl-12 col-lg-8 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="header-title mb-0 ">Total Sales</h4>
+                                    <select class="custome-select border-0 pr-3">
+                                        <option selected>Revenue [13.966]</option>
+                                        <option value="0">Returns [27.219]</option>
+                                        <option value="1">Queries [03.365]</option>
+                                        <option value="2">Invoices [04.975]</option>
+                                    </select>
+                                </div>
+                                <div id="verview-shart"></div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <section>
+                    <div class="container pb-5 mt-5">
+                        <div class="row align-content-start">
+                            <div class="col-8  ">
+                                <div class="row">
+                                    <h2 style="margin-left: 15px; margin-bottom: 8px; color: brown;">Admin User List</h2>
+            
+            
+            
+                                    <table class="table">
+                                        <thead style="color:gray;">
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Seller</th>
+                                                <th scope="col">Details</th>
+                                                <th scope="col">PaymentMethod</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">Location</th>
+                                                <th scope="col">Date</th>
+            
+            
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" style="color: brown;">1</th>
+                                                <td>Azhar</td>
+                                                <td>Adidas</td>
+                                                <td>Details</td>
+                                                <td style="color:green;">Vodafon Cash</td>
+                                                <td>20 $</td>
+                                                <td>Alex</td>
+                                                <td>21/8/2021</td>
+            
+            
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="color: brown;">2</th>
+                                                <td>Heba</td>
+                                                <td>Adidas</td>
+                                                <td>Details</td>
+                                                <td style="color:green;">Vodafon Cash</td>
+                                                <td>20 $</td>
+                                                <td>Alex</td>
+                                                <td>21/8/2021</td>
+            
+            
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="color: brown;">3</th>
+                                                <td>Abeer</td>
+                                                <td>Adidas</td>
+                                                <td>Details</td>
+                                                <td style="color:green;">Vodafon Cash</td>
+                                                <td>20 $</td>
+                                                <td>Alex</td>
+                                                <td>21/8/2021</td>
+            
+            
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="color: brown;">4</th>
+                                                <td>Habiba</td>
+                                                <td>Adidas</td>
+                                                <td>Details</td>
+                                                <td style="color:green;">Vodafon Cash</td>
+                                                <td>20 $</td>
+                                                <td>Alex</td>
+                                                <td>21/8/2021</td>
+            
+            
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="color: brown;">5</th>
+                                                <td>Mohamed</td>
+                                                <td>Adidas</td>
+                                                <td>Details</td>
+                                                <td style="color:green;">Vodafon Cash</td>
+                                                <td>20 $</td>
+                                                <td>Alex</td>
+                                                <td>21/8/2021</td>
+            
+            
+                                            </tr>
+            
+                                        </tbody>
+                                    </table>
+            
+            
+                                </div>
+                            </div>
+                            <div class="col-3 ml-2 align-content-start ">
+                                <div class="row align-items-start">
+            
+            
+                                    <div class="col-lg-3 col-md-3  ">
+                                        <h2 style="margin-left: 15px; margin-bottom: 8px; color: brown;">RecentVisit
+                                        </h2>
+                                        <div class="pb-1">
+            
+                                            <div class="card text-start " style="width: 25rem; margin-top: 2px;">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                       
+                                                        <div style="margin-left: 8px;">
+                                                            <p class="card-text" style="font-weight: bold;"> 10:15AM</p>
+                                                            <p class="card-text" style="font-weight: bold;"> 1/May/2020</p>
+            
+                                                        </div>
+                                                        <div style="margin-left: 16px;">
+                                                            <img src="../Shoplex Admin App/img/product/product-1.jpg"
+                                                                class="card-img-center " style="height: 5rem; ">
+                                                        </div>
+                                                        <div style="margin-left: 10px;">
+                                                            <p class="card-text" style="font-weight: bold; color: green;"> Azhar Ragab</p>
+                                                            <p class="card-text" > Client</p>
+            
+                                                        </div>
+                                                        <div class=" col text-right">
+                                                          <p class="card-text" style="color: brown; font-weight: bold; "> ID:123</p> 
+            
+                                                        </div>
+            
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                        <div class="pb-1">
+            
+                                            <div class="card text-start " style="width: 25rem; margin-top: 2px;">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                       
+                                                        <div style="margin-left: 8px;">
+                                                            <p class="card-text" style="font-weight: bold;"> 10:15AM</p>
+                                                            <p class="card-text" style="font-weight: bold;"> 1/May/2020</p>
+            
+                                                        </div>
+                                                        <div style="margin-left: 16px;">
+                                                            <img src="../Shoplex Admin App/img/product/product-3.jpg"
+                                                                class="card-img-center " style="height: 5rem; ">
+                                                        </div>
+                                                        <div style="margin-left: 10px;">
+                                                            <p class="card-text" style="font-weight: bold; color: green;"> Heba Ali</p>
+                                                            <p class="card-text" > Client</p>
+            
+                                                        </div>
+                                                        <div class=" col text-right">
+                                                          <p class="card-text" style="color: brown; font-weight: bold;  "> ID:123</p> 
+            
+                                                        </div>
+            
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                        <div class="pb-1">
+            
+                                            <div class="card text-start " style="width: 25rem; margin-top: 2px;">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                       
+                                                        <div style="margin-left: 8px;">
+                                                            <p class="card-text" style="font-weight: bold;"> 10:15AM</p>
+                                                            <p class="card-text" style="font-weight: bold;"> 1/May/2020</p>
+            
+                                                        </div>
+                                                        <div style="margin-left: 16px;">
+                                                            <img src="../Shoplex Admin App/img/product/product-6.jpg"
+                                                                class="card-img-center " style="height: 5rem; ">
+                                                        </div>
+                                                        <div style="margin-left: 10px;">
+                                                            <p class="card-text" style="font-weight: bold; color: green;">Abeer Meckawi</p>
+                                                            <p class="card-text" > Client</p>
+            
+                                                        </div>
+                                                        <div class=" col text-right" >
+                                                          <p class="card-text " style="color: brown; font-weight: bold; "> ID:123</p> 
+            
+                                                        </div>
+            
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                            </div>
+                                        </div>
+            
+            
+                                    </div>
+                                </div>
+            
+            
+            
+                            </div>
+            
+                        </div>
+            
+            
+                    </div>
+            
+            
+            
+            
+                </section>
+            
+            </div>
+        
+
+  
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
