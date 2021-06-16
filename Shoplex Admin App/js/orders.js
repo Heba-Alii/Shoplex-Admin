@@ -19,7 +19,7 @@ var ulLastOrder = document.getElementById('LastOrder-list');
 
   function logout(){
       firebase.auth().signOut();
-  }
+  }  
 
   orders.logout = logout
 })()
@@ -67,10 +67,12 @@ function setItem(order,product) {
     row.className='row justify-content-around';
     //card img
     let cardimg = document.createElement('div');
+    
     cardimg.className='col-4';
     //img
     let img = document.createElement('img');
     img.setAttribute('src', product.images[0]);
+    img.alt = "Image Loading "
     img.className='card-img-center ';
     img.style.height='9rem';
     img.style.width='9rem';

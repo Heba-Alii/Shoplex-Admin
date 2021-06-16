@@ -59,24 +59,29 @@ function createTable(data, isUser) {
     let tr = document.createElement('tr');
 
     let th = document.createElement('th');
+    th.className="align-middle"
     th.setAttribute("scope", "row")
     th.style.color = "brown"
     th.innerText = index++
 
     let tdImage = document.createElement('td');
     let image = document.createElement('img');
-    image.style.height = '5rem';
-    image.style.width = '5rem';
+    image.style.height = '4rem';
+    image.style.width = '6rem';
     image.src = data.image
     image.className="rounded-circle"
+    tdImage.className="align-middle"
 
     let tdName = document.createElement('td');
-    tdName.innerText = data.name
+    tdName.innerText = data.name 
+    tdName.className="align-middle"
 
     let tdEmail = document.createElement('td');
     tdEmail.innerText = data.email
+    tdEmail.className="align-middle"
 
     let tdDate = document.createElement('td');
+    tdDate.className="align-middle"
     if (!isUser) {
         tdDate.innerText = (data.date).toDate().toDateString();;
     }
@@ -86,8 +91,10 @@ function createTable(data, isUser) {
 
     let tdPhone = document.createElement('td');
     tdPhone.innerText = data.phone
+    tdPhone.className="align-middle"
 
     let tdAddress = document.createElement('td');
+    tdAddress.className="align-middle"
     if (isUser) {
         tdAddress.innerText = data.address
     }
@@ -96,6 +103,7 @@ function createTable(data, isUser) {
 
     }
     let tdUserSeller = document.createElement('td');
+    tdUserSeller.className="align-middle"
     if (isUser) {
         tdUserSeller.innerText = "User"
     }
@@ -138,6 +146,8 @@ function createRecentVisitTable(recentVisit) {
     let tr = document.createElement('tr');
 
     let th = document.createElement('th');
+    th.className="align-middle"
+
     th.setAttribute("scope", "row")
     th.style.color = "brown"
     th.innerText = i++
@@ -147,17 +157,23 @@ function createRecentVisitTable(recentVisit) {
     img.style.height = '7rem';
     img.style.width = '7rem';
     img.src = recentVisit.image
-    img.className="rounded-circle"
+    img.className="rounded-circle align-middle"
+    
     
 
     let rvName = document.createElement('td');
     rvName.innerText = recentVisit.name
+    rvName.className="align-middle"
 
     let tdPhone = document.createElement('td');
     tdPhone.innerText = recentVisit.phone
+    tdPhone.className="align-middle"
+    
     let tdmail = document.createElement('td');
     tdmail.innerText = recentVisit.email
+    tdmail.className="align-middle"
     let tdDate = document.createElement('td');
+    tdDate.className="align-middle"
     var date = new Date(recentVisit.date.seconds*1000);
     console.log(recentVisit.date.seconds);
     tdDate.innerText =  date.getDate() +
@@ -175,8 +191,7 @@ function createRecentVisitTable(recentVisit) {
 
     tr.appendChild(tdDate);
 
-
-    tableRecent.appendChild(tr);
+tableRecent.appendChild(tr);
     //  }
 }
 
