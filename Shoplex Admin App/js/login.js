@@ -6,7 +6,7 @@
       .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
-        window.location.replace("index.html")
+        window.location.replace("DashBoard.html")
         // ...
     }).catch((error) => {
         var errorCode = error.code;

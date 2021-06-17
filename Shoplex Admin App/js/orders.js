@@ -13,7 +13,7 @@ var ulLastOrder = document.getElementById('LastOrder-list');
             getLastOrders();
         } else {
             uid = null
-            window.location.replace("login.html")
+            window.location.replace("index.html")
         }
   });
 

@@ -13,7 +13,7 @@ var database = null;
             getAllRecentVisits();
         } else {
             uid = null
-            window.location.replace("login.html")
+            window.location.replace("index.html")
         }
 
     });

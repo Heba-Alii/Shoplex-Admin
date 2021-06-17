@@ -15,7 +15,7 @@ var uLocation = document.getElementById('location-list');
             getAllLocations();
         } else {
             uid = null
-            window.location.replace("login.html")
+            window.location.replace("index.html")
         }
     });
 

@@ -1,343 +1,113 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dash Board</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
-    <!-- amchart css -->
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
-        media="all" />
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <!-- others css -->
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/default-css.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <!-- modernizr css -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+<!--===============================================================================================-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>
 
-    <!--===============================================================================================-->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-analytics.js"></script>
 
 </head>
-
-<body>
-    <header class="header">
-
-        <div class="row justify-content-center">
-            <div class="col-xl-3 col-lg-2">
-                <div class="header__logo">
-                    <a href="./DashBoard.html"><img src="img/logo.png"></a>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-7 ">
-                <nav class="header__menu ">
-                    <ul class="justify-content-between">
-                        <li class="active mr-4"><a href="./DashBoard.html">DashBoard</a></li>
-                        <li class="mr-4"><a href="./Orders.html">Orders</a></li>
-                        <li class="mr-4"><a href="./Products.html">Products</a></li>
-                        <li class=" mr-4"><a href="./Sellers.html">Sellers</a></li>
-                        <li class=" mr-4"><a href="./Reports.html">Reports</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-lg-3">
-                <div class="header__right">
-
-                    <ul class="header__right__widget">
-                        <li><span><i class="fas fa-sign-out-alt" onclick="dashboard.logout()"></i></span></li>
-
-                    </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </header>
-
-
-
-
-    <div class="main-content-inner container">
-
-        <div class="sales-report-area mt-2 mb-4">
-            <div class="row justify-content-between">
-                <div class="col-md-6 ">
-                    <div class="single-report mb-xs-30">
-                        <div class="s-report-inner pr--20 pt--30 mb-3">
-
-                            <div class="s-report-title d-flex justify-content-between">
-                                <h4 class="header-title mb-0" ;>ALL USERS</h4>
-                                <p id="TotalUsers"></p>
-                            </div>
-                            <div class="d-flex justify-content-between pb-2">
-                                <span id="TotalNewUsers" style="color: blue;"></span>
-                                <span id="TotalOldUsers" style="color: crimson;"></span>
-                            </div>
-                        </div>
-                        <canvas id="coin_sales1" height="200"></canvas>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="single-report mb-xs-30">
-                        <div class="s-report-inner pr--20 pt--30 mb-3">
-
-                            <div class="s-report-title d-flex justify-content-between">
-                                <h4 class="header-title mb-0">ALL SELLERS</h4>
-                                <p id="TotalSeller"></p>
-                            </div>
-                            <div class="d-flex justify-content-between pb-2">
-                                <span id="TotalNewSellers" style="color: blue;"></span>
-                                <span id="TotalDeleteSellers" style="color: crimson;"></span>
-                            </div>
-                        </div>
-                        <canvas id="coin_sales2" height="200"></canvas>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-
-
-
-    </div>
-    <section class="container">
-        <div class="row">
-
-            <div class="col-md-4 coin-distribution mb-4">
-                <div class="card h-full">
-                    <div class="card-body">
-
-
-                        <div class="d-flex justify-content-between pb-2 ">
-                            <h4 class="header-title mb-0">Fashion</h4>
-                            <span id="TotalFashion"></span>
-                        </div>
-                        <div id="Fashion"></div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="col-md-4 coin-distribution  mb-4">
-                <div class="card h-full">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between pb-2">
-                            <h4 class="header-title mb-0">Health Care</h4>
-                            <span id="ToalHealthCare"></span>
-                        </div>
-                        <div id="Health-care"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-4 coin-distribution  mb-4">
-                <div class="card h-full">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between pb-2">
-                            <h4 class="header-title mb-0">Phones and Tablets</h4>
-                            <span id="TotalPhones"></span>
-                        </div>
-                        <div id="Phone-and-Tablets"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-4 coin-distribution  mb-4">
-                <div class="card h-full">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between pb-2">
-                            <h4 class="header-title mb-0">Electronics</h4>
-                            <span id="TotalElectronics"></span>
-                        </div>
-                        <div id="Electronics"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-4 coin-distribution  mb-4">
-                <div class="card h-full">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between pb-2">
-                            <h4 class="header-title mb-0">Accessories</h4>
-                            <span id="TotalAccessories"></span>
-                        </div>
-                        <div id="Accessories"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-4 coin-distribution  mb-4">
-                <div class="card h-full">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between pb-2">
-                            <h4 class="header-title mb-0">Books</h4>
-                            <span id="TotalBooks"></span>
-                        </div>
-                        <div id="Books"></div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <section>
-        <div class="container pb-5 mt-5">
-            <div class="row align-content-start">
-                <div class="col  ">
-                    <div class="row">
-                        <h2 style=" margin-bottom: 8px; color: brown;">Admin User List</h2>
-
-
-
-                        <table class="table table-bordered text-center">
-                            <thead style="color:gray;">
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th class="pr-5 pl-5" scope="col">Date</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Address</th>
-                                    <th scope="col">User/Seller</th>
-
-
-                                </tr>
-                            </thead>
-                            <tbody id="userList">
-
-
-
-
-
-                            </tbody>
-                        </table>
-
-
-                    </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-    <section>
-        <div class="container pb-5 mt-5">
-            <div class="row align-content-start">
-                <div class="col  ">
-                    <div class="row">
-                        <h2 style=" margin-bottom: 8px; color: brown;">Recent Visits</h2>
-
-
-
-                        <table class="table  table-bordered text-center">
-                            <thead style="color:gray;">
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">E-mail</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Date/Time</th>
-
-                                    
-
-
-
-                                </tr>
-                            </thead>
-                            <tbody id="recentVisit">
-
-
-
-
-
-                            </tbody>
-                        </table>
-
-
-                    </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-    <!--===============================================================================================-->
-    <script src="js/firebase.js"></script>
-    <script src="js/dashboard.js"></script>
-
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
-
-    <!-- start chart js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- start highcharts js -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <!-- start zingchart js -->
-    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-
-    <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
-    <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
-    <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
+<body style="background-color: #AEBEF5;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST">
+					<span class="login100-form-title p-b-43">
+						Welcome back! Please login to your Account.
+					</span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@gmail.com">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100"></span>
+						<span class="label-input100">User Name</span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Password</span>
+					</div>
+
+					
+			
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" onclick="loginuser(email.value, pass.value)">
+							Login
+						</button>
+					</div>
+					
+					<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							Terms of use. Privacy policy
+						</span>
+					</div>
+
+				
+				</form>
+
+				<div class="login100-more" style="background-image: url('img/AdminLogin.jpg');
+				opacity:0.65">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!--===============================================================================================-->
+	<script src="js/firebase.js"></script>
+	<script src="js/login.js"></script>
 </body>
-
 </html>

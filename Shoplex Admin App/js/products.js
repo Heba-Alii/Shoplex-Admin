@@ -12,7 +12,7 @@ var ul = document.getElementById('product-list');
             getAllProducts();
         } else {
             uid = null;
-            window.location.replace("login.html");
+            window.location.replace("index.html");
         }
     });
 
