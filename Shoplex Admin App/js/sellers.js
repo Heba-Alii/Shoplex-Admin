@@ -64,6 +64,7 @@ function setItem(seller) {
     img.style.height='7rem';
     img.style.width='9rem';
     img.setAttribute('alt', '../Shoplex Admin App/img/Seller/shopping.png')
+    //  img.setAttribute('src', (seller.image.length > 0? seller.image[0]: 'https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg'));
 
     //card-body
     let cardBody = document.createElement('div');
