@@ -71,6 +71,7 @@ function setItem(product) {
     let olImage = document.createElement('ol');
     olImage.className = "carousel-indicators";
     olImage.setAttribute('id', `indicators${product.productID}`);
+    
     //---> Wrapper for slides
     let wrapSlide = document.createElement('div');
     wrapSlide.className = "carousel-inner";

@@ -135,7 +135,7 @@ line.className="border-bottom"
     //------> Confirm listner
     confirmButton.addEventListener("click", function () { confirmSeller(seller.storeID) });
 
-
+  
 
     /*************************************************************************************************** */
     ul.appendChild(li);
