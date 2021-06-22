@@ -1,59 +1,3 @@
-// /*--------------  coin_sales1 start ------------*/
-// if ($('#coin_sales1').length) {
-//     var ctx = document.getElementById("coin_sales1").getContext('2d');
-//     var chart = new Chart(ctx, {
-//         // The type of chart we want to create
-//         type: 'line',
-//         // The data for our dataset
-//         data: {
-//             labels: ["Fashion (Men)", "Fashion (Women)", "Fashion (Kids)", "Health Care(HairCare)", "Health Care(Perfume)", "Health Care (Makeup)", "Phone and Tablets (Phones)", "Phone and Tablets (Tablets)", "Phone and Tablets ( I Pad)", "Electronics (TVs)", "Phone and Tablets (Smart Watches)", "Phone and Tablets (Audio)","May","Phone and Tablets (Cameras)","Phone and Tablets (Others)","Accessories(Jewellery)","Accessories(Watches)","Accessories(Belts)","Accessories(Phone Casses)","Accessories(Cables)","Accessories(Charges)","Accessories(Selfie Stick)","Books(Art and Humanities)","Books(Fiction)","Books(Entertainment)","Books(Science and Technology)","Books(Education)"],
-//             datasets: [{
-//                 label: "Item",
-//                 backgroundColor: "rgba(117, 19, 246, 0.1)",
-//                 borderColor: '#0b76b6',
-//                 data: [18, 41, 86, 49, 20, 35, 20, 50, 49, 30, 45, 20,15,90,80,14,95,20,17,100,62,28,14,60,30,18,50,30,70,60,20 ],
-//             }]
-//         },
-//         // Configuration options go here
-//         options: {
-//             legend: {
-//                 display: false
-//             },
-//             animation: {
-//                 easing: "easeInOutBack"
-//             },
-//             scales: {
-//                 yAxes: [{
-//                     display: !1,
-//                     ticks: {
-//                         fontColor: "rgba(0,0,0,0.5)",
-//                         fontStyle: "bold",
-//                         beginAtZero: !0,
-//                         maxTicksLimit: 5,
-//                         padding: 0
-//                     },
-//                     gridLines: {
-//                         drawTicks: !1,
-//                         display: !1
-//                     }
-//                 }],
-//                 xAxes: [{
-//                     display: !1,
-//                     gridLines: {
-//                         zeroLineColor: "transparent"
-//                     },
-//                     ticks: {
-//                         padding: 0,
-//                         fontColor: "rgba(0,0,0,0.5)",
-//                         fontStyle: "bold"
-//                     }
-//                 }]
-//             }
-//         }
-//     });
-// }
-/*--------------  coin_sales1 End ------------*/
-
 var totalFashion = document.getElementById("TotalFashion")
 var totalHealthCare = document.getElementById("ToalHealthCare")
 var totalPhones = document.getElementById("TotalPhones")
@@ -178,7 +122,7 @@ totaSells.innerText=allSellers + " Seller "
     if(dict.hasOwnProperty("Electronics")){
         let elec = dict["Electronics"]
         
-        values[0] = (elec.hasOwnProperty("TV")?elec ["TV"]: 0)
+        values[0] = (elec.hasOwnProperty("TVS")?elec ["TVS"]: 0)
         values[1] = (elec.hasOwnProperty("Audio")?elec ["Audio"]: 0)
         values[2] = (elec.hasOwnProperty("Smart Watches")?elec ["Smart Watches"]: 0)
         values[3] = (elec.hasOwnProperty("Cameras")?elec ["Cameras"]: 0)
@@ -209,11 +153,11 @@ totaSells.innerText=allSellers + " Seller "
     if(dict.hasOwnProperty("Books")){
         let books = dict["Books"]
         
-        values[0] = (books.hasOwnProperty("Art & Humanities")?books ["Art & Humanities"]: 0)
+        values[0] = (books.hasOwnProperty("Art and Humanities")?books ["Art and Humanities"]: 0)
         values[1] = (books.hasOwnProperty("Fiction")?books ["Fiction"]: 0)
         values[2] = (books.hasOwnProperty("Entertainment")?books ["Entertainment"]: 0)
-        values[3] = (books.hasOwnProperty("Science & Technology")?books ["Science & Technology"]: 0)
-        values[4] = (books.hasOwnProperty("Education")?books ["CablEducationes"]: 0)
+        values[3] = (books.hasOwnProperty("Science and Technology")?books ["Science and Technology"]: 0)
+        values[4] = (books.hasOwnProperty("Education")?books ["Education"]: 0)
         totalBooks.innerText="Total : "+(books.hasOwnProperty("Total")?books["Total"]:0)
    
     

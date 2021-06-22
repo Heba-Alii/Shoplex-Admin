@@ -7,7 +7,6 @@ var database = null;
 
         if (user) {
             uid = user.uid;
-            //alert(user.email);
             database = firebase.firestore();
             getAllData();
             getAllRecentVisits();
@@ -29,32 +28,22 @@ function getAllData() {
     database.collection("Sellers").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var seller = doc.data()
-
             createTable(seller, false)
-
         });
     });
 
     database.collection("Users").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var user = doc.data()
-
             createTable(user, true)
-
-
         });
 
     });
-    // console.log(dataList)
-
-
-
 }
+
 var tableBody = document.getElementById('userList');
 var index = 1
 function createTable(data, isUser) {
-
-    // for (var i = 0; i < data.length ; i++) {
 
     let tr = document.createElement('tr');
 
@@ -66,8 +55,8 @@ function createTable(data, isUser) {
 
     let tdImage = document.createElement('td');
     let image = document.createElement('img');
-    image.style.height = '4rem';
-    image.style.width = '6rem';
+    image.style.height = '3rem';
+    image.style.width = '3rem';
     image.src = data.image
     image.className="rounded-circle"
     tdImage.className="align-middle"
@@ -81,13 +70,9 @@ function createTable(data, isUser) {
     tdEmail.className="align-middle"
 
     let tdDate = document.createElement('td');
-    tdDate.className="align-middle"
-    if (!isUser) {
-        tdDate.innerText = (data.date).toDate().toDateString();;
-    }
-    else {
-        tdDate.innerText = "Mon May 24 2021";
-    }
+    tdDate.className="align-middle";
+
+    tdDate.innerText = (data.date).toDate().toDateString();
 
     let tdPhone = document.createElement('td');
     tdPhone.innerText = data.phone
@@ -122,13 +107,10 @@ function createTable(data, isUser) {
     tr.appendChild(tdAddress);
     tr.appendChild(tdUserSeller);
     tableBody.appendChild(tr);
-    //  }
 }
 
-
-
 function getAllRecentVisits() {
-    database.collection("Recent Visits").get().then((querySnapshot) => {
+    database.collection("Recent Visits").orderBy("date", "desc").limit(50).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var recentVisits = doc.data()
 
@@ -137,11 +119,10 @@ function getAllRecentVisits() {
         });
     });
 }
+
 var tableRecent = document.getElementById('recentVisit');
 var i = 1
 function createRecentVisitTable(recentVisit) {
-
-
 
     let tr = document.createElement('tr');
 
@@ -159,8 +140,6 @@ function createRecentVisitTable(recentVisit) {
     img.src = recentVisit.image
     img.className="rounded-circle align-middle"
     
-    
-
     let rvName = document.createElement('td');
     rvName.innerText = recentVisit.name
     rvName.className="align-middle"
@@ -175,7 +154,6 @@ function createRecentVisitTable(recentVisit) {
     let tdDate = document.createElement('td');
     tdDate.className="align-middle"
     var date = new Date(recentVisit.date.seconds*1000);
-    console.log(recentVisit.date.seconds);
     tdDate.innerText =  date.getDate() +
         "/" + (date.getMonth() + 1) +
         "/" + date.getFullYear() +
@@ -192,6 +170,4 @@ function createRecentVisitTable(recentVisit) {
     tr.appendChild(tdDate);
 
 tableRecent.appendChild(tr);
-    //  }
 }
-

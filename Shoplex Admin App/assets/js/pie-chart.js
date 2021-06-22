@@ -343,7 +343,7 @@ if ($('#Electronics').length) {
                 "series": [
                     {
                         "values": [data[0]],
-                        "text": "TV",
+                        "text": "TVS",
                         "background-color": "#F75D59"
                     },
                     {
@@ -537,7 +537,7 @@ if ($('#Books').length) {
                 },
                 "series": [{
                         "values": [data[0]],
-                        "text": "Art & Humanities",
+                        "text": "Art and Humanities",
                         "background-color": "#F75D59"
                     },
                     {
@@ -552,7 +552,7 @@ if ($('#Books').length) {
                     },
                     {
                         "values": [data[3]],
-                        "text": "Science & Technology",
+                        "text": "Science and Technology",
                         "background-color": "#4CC417"
                     },
                     {
