@@ -23,7 +23,7 @@ var database = null;
 
 
 function getAllReports(){
-    database.collection("Reports").get().then((querySnapshot) => {
+    database.collection("Reports").orderBy("date", "desc").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var report = doc.data()
             reportTableItem(report)

@@ -193,8 +193,9 @@ function setItemLast(order,product) {
 
   //----->location
   let location = document.createElement('p');
+  location.style.width = '20rem'
   location.className = 'card-text';
-  location.innerText = "Saba_Basha , Alexandria , Egypt";
+  location.innerText = order.deliveryAddress;
   
    //----->orderStatus
    let orderStatus = document.createElement('p');

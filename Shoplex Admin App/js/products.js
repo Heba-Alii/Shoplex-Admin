@@ -104,7 +104,7 @@ function setItem(product) {
     let category = document.createElement('div');
     category.className = 'mb-2 card-category';
     category.style.color = '#666666';
-    category.innerHTML = product.category;
+    category.innerHTML = product.category + ", " + product.subCategory;
 
 
     /*************************************************************************************************** */
@@ -117,7 +117,12 @@ function setItem(product) {
     rate.className = 'mb-4';
     //--------> premium
     let premium = document.createElement('span');
-    premium.innerText = "Premium : " + getDueation(product.premiumDays)
+    if(product.premium != null){
+        premium.innerText = "Premium : " + getDueation(product.premium.premiumDays)
+    } else {
+        premium.innerText = "Premium : No"
+    }
+    
 
 
     /*************************************************************************************************** */
@@ -163,7 +168,7 @@ function setItem(product) {
 
     } else {
 
-        newPriceSpan.innerText = (product.newPrice).toFixed(0) + " L.E";
+        newPriceSpan.innerText = (product.newPrice).toFixed(2) + " L.E";
     }
 
 
