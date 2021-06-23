@@ -28,7 +28,7 @@ var uLocation = document.getElementById('location-list');
 
 // Sellers
 function getAllSellers() {
-    database.collection("Pending Sellers").get().then((querySnapshot) => {
+    database.collection("PendingSellers").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var seller = doc.data()
 
@@ -183,7 +183,7 @@ function confirmSeller(storeID) {
 function deleteSeller(storeID) {
     seller = sellers.find(item => item.storeID == storeID);
     if (seller) {
-        database.collection("Pending Sellers").doc(storeID).delete()
+        database.collection("PendingSellers").doc(storeID).delete()
             .then(() => {
                 console.log("Document successfully deleted!");
                 //view and pending sellers
