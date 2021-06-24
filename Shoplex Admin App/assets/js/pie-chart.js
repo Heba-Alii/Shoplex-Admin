@@ -64,25 +64,8 @@ if ($('#Fashion').length) {
                 },
             
 
-                // "series": [
-                    
-                //     {
-                //         "values": [125],
-                //         "text": "Kids",
-                //         "background-color": "#ff0000"
-                //     },
-                //     {
-                //         "values": [200],
-                //         "text": "Men",
-                //         "background-color": "#fd9c21"
-                //     },
-                //     {
-                //         "values": [500],
-                //         "text": "Women",
-                //         "background-color": "#2c13f8"
-                //     }
-                 
-                // ],
+          
+              
                 "series": [
                     {
                         "values": [data[0]],

@@ -110,7 +110,7 @@ function createTable(data, isUser) {
 }
 
 function getAllRecentVisits() {
-    database.collection("Recent Visits").orderBy("date", "desc").limit(50).get().then((querySnapshot) => {
+    database.collection("Recent Visits").orderBy("date", "desc").limit(150).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var recentVisits = doc.data()
 
