@@ -44,8 +44,8 @@ function setItem(seller) {
 
     //list
     let li = document.createElement('li');
-    li.setAttribute('id', seller.sellerID);
-    li.className = 'col-lg-4 col-md-4 list-item'
+    li.setAttribute('id', seller.storeID);
+    li.className = 'col-lg-4 col-md-4 list-item mb-4'
     
     //card
     let card = document.createElement('div');
